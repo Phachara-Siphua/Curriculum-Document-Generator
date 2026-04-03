@@ -1,0 +1,34 @@
+สร้างโฟลเดอร์ Backend:
+ใน Terminal พิมพ์คำสั่งสร้างโฟลเดอร์และเข้าไปในโฟลเดอร์นั้น:
+mkdir backend
+cd backend
+
+สร้างจำลองสภาพแวดล้อม (Virtual Environment):
+(เพื่อไม่ให้ Library ของโปรเจคนี้ไปตีกับโปรเจคอื่นในเครื่อง)
+python -m venv venv
+
+เปิดใช้งาน Virtual Environment:
+(สังเกตว่าถ้าพิมพ์ถูก จะมีคำว่า (venv) สีเขียวๆ ขึ้นหน้าบรรทัดคำสั่ง)
+.\venv\Scripts\activate
+
+ติดตั้ง FastAPI และตัวที่เกี่ยวข้องทั้งหมด:
+pip install fastapi uvicorn pydantic sqlalchemy pymysql
+
+Runเซิร์ฟเวอร์ Backend
+uvicorn main:app --reload
+
+===================================================================================
+
+สั่งสร้างโปรเจค Nuxt 3:
+พิมพ์คำสั่งนี้ ระบบจะสร้างโฟลเดอร์ frontend ให้พร้อมโครงสร้าง Nuxt ครับ
+npx nuxi@latest init frontend
+(ถ้ามันถาม Ok to proceed? ให้พิมพ์ y แล้วกด Enter)
+(ถ้ามันถามหา Package Manager ให้ใช้ลูกศรคีย์บอร์ดเลื่อนเลือก npm แล้วกด Enter ครับ)
+(ถ้ามันถามเรื่อง Git repository ให้ตอบ No ไปก่อนก็ได้ครับ)
+
+เข้าไปในโฟลเดอร์และติดตั้งแพ็กเกจ:
+cd frontend
+npm install
+
+Runเซิร์ฟเวอร์ Frontend ทิ้งไว้:
+npm run dev
